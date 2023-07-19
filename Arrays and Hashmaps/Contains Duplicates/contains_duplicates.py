@@ -2,7 +2,7 @@
 from typing import List
 
 
-def contains_duplicates(self, nums: List[int]) -> bool:
+def contains_duplicates(nums: List[int]) -> bool:
     dict = {}
     for num in nums:
         if num in dict:
