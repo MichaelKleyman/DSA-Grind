@@ -2,7 +2,7 @@
 # SOLUTION 1 
 # Time complexity: O(n)
 # Space complexity: O(n)
-def validAnagram(s: str, t: str) -> bool:
+def validAnagram1(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
     
@@ -22,5 +22,10 @@ def validAnagram(s: str, t: str) -> bool:
 s = 'car'
 t = 'acr'
 
-print(validAnagram(s, t))
+print(validAnagram1(s, t))
     
+
+def validAnagram2(s: str, t: str) -> bool:
+    return sorted(s) == sorted(t)
+
+print(validAnagram2(s, t))
