@@ -22,9 +22,12 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
             # else create a new key val pair
             hashMap[s] = [str]
     
-    # now loop through the hash map and append each arr val into the result array
-    for key, val in hashMap.items():
-        result.append(val)
+    # # now loop through the hash map and append each arr val into the result array
+    # for key, val in hashMap.items():
+    #     result.append(val)
+
+        # OR 
+    return hashMap.values()
 
     return result
 
