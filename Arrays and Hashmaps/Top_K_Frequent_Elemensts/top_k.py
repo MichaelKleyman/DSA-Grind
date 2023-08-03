@@ -35,3 +35,24 @@ print(topKFrequent([1,3,1,3,4,5,2,1], 2))
 
 
 
+# space complexity: O(n) linear time complexity
+# time complexity: O(n) linear ... but because of the nested for loop i feel like i'm seeing O(n^2) however because function returns as soon as the length of res reaches k, its not fully looping through the for loop
+
+def topKFrequent2(nums: List[int], k: int) -> List[int]:
+    hash = {}
+    res = []
+    freq = [[] for i in range(len(nums)+ 1)]
+
+    for n in nums:
+        hash[n] = 1 + hash.get(n, 0)
+    
+    for key, val in hash.items():
+        freq[val].append(key)
+    
+    for i in range(len(freq) - 1, 0, -1):
+        for n in freq[i]:
+            res.append(n)
+            if len(res) >= k:
+                return res
+
+print(topKFrequent2([1,3,1,3,4,5,2,1], 2))
