@@ -1,4 +1,6 @@
 
+# TIME COMPLEXITY: O(n) Linear time complexity : due to two loops happening, but not inner looops
+# SPACE COMPLEXITY: 0(1) Constant time complexity: due to no type of lists, hashmaps or strings storing values
 
 def isPalindrome(s: str) -> bool:
 
